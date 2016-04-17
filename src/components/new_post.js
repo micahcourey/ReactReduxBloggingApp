@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { createPost } from '../actions/index';
+import { Link } from 'react-router';
 
 class NewPost extends Component {
   render() {
@@ -8,7 +9,15 @@ class NewPost extends Component {
 
     return (
       <form onSubmit={handleSubmit(this.props.createPost)}>
-        <h3>Create A New Post</h3>
+        <br />
+        <div>
+          <div className="text-md-left">
+            <h3>Create A New Post</h3>
+          </div>
+          <div className="text-md-right">
+            <Link to="/" className="btn btn-danger">Cancel</Link>
+          </div>
+        </div>
         <div className={`form-group ${title.touched && title.invalid ? 'has-danger' : ''}`}>
           <label>Title</label>
           <input type="text" className="form-control" {...title} />
@@ -33,7 +42,9 @@ class NewPost extends Component {
           </div>
         </div>
 
+
         <button type="submit" className="btn btn-primary">Publish Post</button>
+
       </form>
 
     );
