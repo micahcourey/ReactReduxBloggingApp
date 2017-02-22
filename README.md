@@ -1,7 +1,8 @@
-Project
-==============
+Bike Commuter Talk
+==================
 
-An app
+A discussion forum built in React and Redux that gives bike commuters a place to share
+bike commuting related info and exeriences.  
 
 Technologies Used
 ----------
