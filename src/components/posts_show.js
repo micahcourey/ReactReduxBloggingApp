@@ -25,13 +25,19 @@ onDeleteClick() {
     }
 
     return (
-      <div>
-        <Link to="/">Home</Link>
-        <button
-          className="btn btn-danger pull-xs-right"
-          onClick={this.onDeleteClick.bind(this)}>
-          Delete Post
-        </button>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-10">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="col-md-2">
+            <button
+              className="btn btn-danger"
+              onClick={this.onDeleteClick.bind(this)}>
+              Delete Post
+            </button>
+          </div>
+        </div>
         <h3>{post.title}</h3>
         <h6>Categories: {post.categories}</h6><br />
         <p>{post.content}</p>

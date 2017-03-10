@@ -14,9 +14,9 @@ class PostsIndex extends Component {
         <div>
           <li className="list-group-item" key={post.id}>
             <Link to={"posts/" + post.id}>
-              <span className="pull-xs-right">{post.categories}</span>
               <strong>{post.title}</strong>
             </Link>
+       
           </li>
         </div>
       );
@@ -26,14 +26,22 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <h1>Bike Commuter Talk</h1>
-        <div className="text-xs-right">
-          <Link to="/posts/new" className="btn btn-primary">Add a Post</Link>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-10">
+            <h1>Bike Commuter Talk</h1>
+          </div>
+          <div className="col-md-2">
+            <Link to="/posts/new" className="btn btn-primary">Add a Post</Link>
+          </div>
         </div>
+      </div>
+      <div>
         <h3>Posts</h3>
         <ul className="list-group">
           {this.renderPosts()}
         </ul>
+      </div>
       </div>
     );
   }
