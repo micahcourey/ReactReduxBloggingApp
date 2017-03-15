@@ -24,13 +24,15 @@ class NewPost extends Component {
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <br />
         <div>
-          <div className="text-md-left">
-            <h3>Create A New Post</h3>
-          </div>
-          <div className="text-md-right">
-            <Link to="/" className="btn btn-danger">Cancel</Link>
-          </div>
+
+            <div className="text-left">
+              <h3>Create A New Post</h3>
+            </div>
+            <div className="text-right">
+              <Link to="/" className="btn btn-danger">Cancel</Link>
+            </div>
         </div>
+
         <div className={`form-group ${title.touched && title.invalid ? 'has-danger' : ''}`}>
           <label>Title</label>
           <input type="text" className="form-control" {...title} />

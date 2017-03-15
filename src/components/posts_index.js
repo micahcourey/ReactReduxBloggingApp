@@ -25,17 +25,12 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-10">
-            <h1>Bike Commuter Talk</h1>
-          </div>
-          <div className="col-md-2">
-            <Link to="/posts/new" className="btn btn-primary">Add a Post</Link>
-          </div>
+      <div>  
+        <h1 className="text-center">Bike Commuter Talk</h1>
+        <div className="text-center">
+          <Link to="/posts/new" className="btn btn-primary">Add a Post</Link>
         </div>
-      </div>
+        <br />
       <div>
         <h3>Posts</h3>
         <ul className="list-group">
